@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Kreactive test</string>
+    <string name="confirm_form_button">Voir la liste</string>
+    <string name="limit_edittext_hint">Limite de la liste</string>
+    <string name="second_text_hint">Second texte</string>
+    <string name="first_text_hint">Premier texte</string>
+    <string name="second_int_hint">Second entier</string>
+    <string name="first_int_hint">Premier entier</string>
+    <string name="form_title">Indiquez les valeurs pour le jeu Fizz-Buzz</string>
+
+
+    <string name="empty_field">Champ vide</string>
 </resources>
