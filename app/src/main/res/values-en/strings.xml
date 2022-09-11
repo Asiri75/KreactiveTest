@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fizz-Buzz game</string>
+    <string name="confirm_form_button">Go to list</string>
+    <string name="limit_edittext_hint">List limit</string>
+    <string name="second_text_hint">Second word</string>
+    <string name="first_text_hint">First word</string>
+    <string name="second_int_hint">Second number</string>
+    <string name="first_int_hint">First number</string>
+    <string name="form_title">Set the values for the list</string>
+    <string name="empty_field">Empty field</string>
+    <string name="not_a_word">Set only one word</string>
+
+</resources>

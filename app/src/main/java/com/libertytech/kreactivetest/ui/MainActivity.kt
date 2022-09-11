@@ -2,6 +2,7 @@ package com.libertytech.kreactivetest.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
 import androidx.appcompat.app.AppCompatActivity
 import com.libertytech.kreactivetest.R
 import com.libertytech.kreactivetest.databinding.ActivityMainBinding
@@ -48,8 +49,16 @@ class MainActivity : AppCompatActivity() {
             binding.firstStringEditText.error = resources.getString(R.string.empty_field)
             false
         }
+        binding.firstStringEditText.text.toString().isNotAWord() -> {
+            binding.firstStringEditText.error = resources.getString(R.string.not_a_word)
+            false
+        }
         binding.secondStringEditText.text.isNullOrBlank() -> {
             binding.secondStringEditText.error = resources.getString(R.string.empty_field)
+            false
+        }
+        binding.secondStringEditText.text.toString().isNotAWord() -> {
+            binding.secondStringEditText.error = resources.getString(R.string.not_a_word)
             false
         }
         binding.limitEditText.text.isNullOrBlank() -> {
@@ -74,3 +83,5 @@ class MainActivity : AppCompatActivity() {
         )
     }
 }
+
+private fun String?.isNotAWord() = (this?.split(" ")?.size ?: 0) != 1

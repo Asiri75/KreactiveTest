@@ -10,6 +10,7 @@ class ResultViewModel : ViewModel() {
 
     fun getResultListLiveData(): LiveData<List<String>> = resultListMutableLiveData
 
+
     fun buildList(
         firstIntField: String,
         secondIntField: String,
