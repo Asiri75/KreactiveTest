@@ -18,8 +18,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
 
         binding.confirmFormButton.setOnClickListener {
             if(areFieldSet()){
@@ -49,6 +50,10 @@ class MainActivity : AppCompatActivity() {
         }
         binding.secondStringEditText.text.isNullOrBlank() -> {
             binding.secondStringEditText.error = resources.getString(R.string.empty_field)
+            false
+        }
+        binding.limitEditText.text.isNullOrBlank() -> {
+            binding.limitEditText.error = resources.getString(R.string.empty_field)
             false
         }
         else -> true
