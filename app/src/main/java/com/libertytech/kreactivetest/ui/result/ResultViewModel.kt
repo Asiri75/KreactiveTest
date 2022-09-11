@@ -10,7 +10,10 @@ class ResultViewModel : ViewModel() {
 
     fun getResultListLiveData(): LiveData<List<String>> = resultListMutableLiveData
 
-
+    /**
+     * Create a list with size of @param limitField
+     * Then set mutable liveData value
+     */
     fun buildList(
         firstIntField: String,
         secondIntField: String,
@@ -31,6 +34,13 @@ class ResultViewModel : ViewModel() {
         }
     }
 
+    /**
+     * Format the number using fizz-buzz rules
+     * If number multiple of firstInt -> firstText
+     * If number multiple of secondInt -> secondText
+     * If number multiple of firstInt and secondInt -> firstText+secondText
+     * Else -> number
+     */
     internal fun formatIndex(number: Int, firstInt: Int, secondInt: Int, firstText: String, secondText: String) = when {
         number % (firstInt * secondInt) == 0 -> firstText + secondText
         number % (firstInt) == 0 -> firstText

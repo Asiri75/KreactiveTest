@@ -2,16 +2,15 @@ package com.libertytech.kreactivetest.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
 import androidx.appcompat.app.AppCompatActivity
 import com.libertytech.kreactivetest.R
 import com.libertytech.kreactivetest.databinding.ActivityMainBinding
+import com.libertytech.kreactivetest.ui.result.FIRST_INT_KEY
+import com.libertytech.kreactivetest.ui.result.FIRST_STRING_KEY
+import com.libertytech.kreactivetest.ui.result.LIMIT_KEY
 import com.libertytech.kreactivetest.ui.result.ResultActivity
-import com.libertytech.kreactivetest.ui.result.ResultActivity.Companion.FIRST_INT_KEY
-import com.libertytech.kreactivetest.ui.result.ResultActivity.Companion.FIRST_STRING_KEY
-import com.libertytech.kreactivetest.ui.result.ResultActivity.Companion.LIMIT_KEY
-import com.libertytech.kreactivetest.ui.result.ResultActivity.Companion.SECOND_INT_KEY
-import com.libertytech.kreactivetest.ui.result.ResultActivity.Companion.SECOND_STRING_KEY
+import com.libertytech.kreactivetest.ui.result.SECOND_INT_KEY
+import com.libertytech.kreactivetest.ui.result.SECOND_STRING_KEY
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,8 +32,8 @@ class MainActivity : AppCompatActivity() {
 
     /**
      * Check all form fields
-     * If empty, show error message
-     * We could have use TextWatcher if we also checked the format
+     * If empty or wrong format, show error message
+     * We could have use TextWatcher
      */
     private fun areFieldSet() = when {
         binding.firstIntEditText.text.isNullOrBlank() -> {
